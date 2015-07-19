@@ -1,5 +1,6 @@
 # Smart S3 Shell Backups with Automated Restore!
-========
+---
+
 Have multiple sites (WordPress in particular) inside the 1 hosting account? This bash script can be setup as a cron to automatically backup the files & database for each of them to Amazon S3.
 
 Something go wrong or need an old backup? The 'restore' command will grab the latest from S3, download it to the server and restore the files & database back the way it was. Bam!
@@ -9,7 +10,7 @@ The 'final' command will put the backup inside a 'final' folder which is stored 
 The script keeps the last 7 days of backups then each Sunday for a month.
 
 ## Usage
---------
+---
 
 ```bash
 ./smart-s3-shell-backups.sh [--delete] [--backup] [--live] [--restore] [--version date]
@@ -49,8 +50,7 @@ Will restore 'blah' folder from the 30th July 2015 backup on S3 (note: backup of
 
 
 ## Installation
---------
-
+---
 The basic process is:
 
 1. Setup a new S3 bucket
@@ -102,7 +102,7 @@ You're now good to manually run commands via SSH! (refer to 'usage' section)
 To automate the backups you need a cron. Via SSH or Control Panel setup a nightly cron, 2am is pretty standard. Please google for the relevant tutorial for your control panel as there's many ways this can be setup.
 
 ## Considerations
---------
+---
 
 - Any folder starting with a number is excluded
 - Only single quotes in wp-config.php like define('DB_NAME', 'database_name_here');
@@ -112,5 +112,5 @@ To automate the backups you need a cron. Via SSH or Control Panel setup a nightl
 - You need to have a local mail server configured in order to send email, for example exim4
 
 ## Support or Issues
---------
+---
 Feel free to get in touch. This script was custom developed as a backup solution for us by an external contractor so our knowledge is more limited than usual!
